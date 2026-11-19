@@ -1,0 +1,272 @@
+/* A small reset so the page starts consistently. Leave these three rules. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: #172554; background: #ffffff; }
+img { max-width: 100%; height: auto; }
+
+/* Your palette. Change the values, then use the variables below. */
+:root {
+ --accent: #7f9f83;
+--accent-soft: #e3eee3;
+}
+:root {
+  --accent: #7f9f83;
+  --accent-soft: #e3eee3;
+
+  --ink: #304438;
+  --muted: #65766a;
+
+  --page: #f6faf6;
+  --panel: #ffffff;
+  --border: #c7d7c9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--page);
+}
+
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  background: var(--accent);
+  color: white;
+}
+
+.brand {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 1rem;
+}
+
+
+/* Headings */
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+
+/* Promise */
+
+.promise {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+
+/* Bicycle image */
+
+.bike-image {
+  display: block;
+
+  width: 320px;
+  max-width: 100%;
+
+  margin: 1.5rem 0 2rem;
+
+  padding: 1rem;
+
+  background: var(--accent-soft);
+
+  border-radius: 0.75rem;
+}
+
+
+/* Cards */
+
+.card {
+  padding: 1.5rem;
+
+  background: var(--panel);
+
+  border: 2px solid var(--border);
+
+  border-radius: 0.75rem;
+}
+
+
+/* List */
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li + li {
+  margin-top: 0.4rem;
+}
+
+
+/* Form */
+
+label {
+  display: block;
+
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+
+  padding: 0.7rem;
+
+  border: 1px solid #9eafa1;
+
+  border-radius: 0.4rem;
+
+  background: white;
+}
+
+
+/* Button */
+
+button {
+  margin-top: 1.2rem;
+
+  padding: 0.75rem 1rem;
+
+  border: 2px solid var(--accent);
+
+  border-radius: 0.4rem;
+
+  background: var(--accent);
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #66866b;
+  border-color: #66866b;
+}
+
+
+/* Keyboard focus */
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+nav a:focus-visible,
+.brand:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+
+/* Booking message */
+
+#message {
+  margin-bottom: 0;
+
+  font-weight: 700;
+}
+
+
+/* Footer */
+
+footer {
+  padding: 1.5rem 2rem;
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+
+/* Mobile layout */
+
+@media (max-width: 40rem) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  header,
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+input, select, button { max-width: 100%; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+header, main, footer { padding: 0 1rem; }
+
